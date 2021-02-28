@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+    <style>
+        body{
+            background-attachment: fixed;
+            background-image: url("https://i.stack.imgur.com/jGlzr.png");
+            background-size: cover;;
+            background-repeat: no-repeat;
+            
+
+        }
+    </style>
+    
+    <script>
+        
+        function validate(){
+            var x = document.forms["myForm"]["title"].value;
+            if(x == ""){
+                alert("title must be filled.");
+                return false;
+
+            }
+
+            var y = document.forms["myForm"]["job"].value;
+            if(y == ""){
+                alert("job must be filled.");
+                return false;
+
+            }
+
+            var z = document.forms["myForm"]["dept"].value;
+            if(z==""){
+                alert("title must be filled.");
+                return false;
+
+            }
+
+            var z = document.forms["myForm"]["country"].value;
+            if(x == ""){
+                alert("country must be filled.");
+                return false;
+            }
+
+            var x = document.forms["myForm"]["Description"].value;
+            if(x == ""){
+                alert("Description must be filled.");
+                return false;
+
+            }
+
+            var x = document.forms["myForm"]["date"].value;
+            if(x == ""){
+                alert("date must be filled.");
+                return false;
+
+            }
+            
+        }
+    </script>
+    <title>Enter Job Data</title>
+
+</head>
+
+    <h1 style="text-align: center;">JOB DATA</h1>
+    <body>
+    <form name="myForm" action="https://support.granicus.com/servlet/rtaImage?eid=ka24A000000DpXm&feoid=00N46000009cBBH&refid=0EM460000004pMj" onsubmit="return validate()" method="post">
+    
+
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title"><br><br>
+
+            
+            <label for="job">Job type</label>
+            <select type="text" name="job" id="job">
+                <option value="select">select</option>
+                <option value="Programmer Analyst Trainee">Programmer Analyst Trainee</option>
+                <option value="Programmer Analyst">Programmer Analyst</option>
+                <option value="Associate Software Engineer">Associate Software Engineer</option>
+                <option value="Senior Software Engineer.">Senior Software Engineer.</option>
+                <option value="Sr. Software Engineer / Developer / Programmer">Sr. Software Engineer / Developer / Programmer</option>
+                 <option value="Software Developer">Software Developer</option>
+                  <option value="Software Engineer">Software Engineer</option>
+                <option value="Project Manager">Project Manager</option>
+                </select><br><br>
+
+            <label for="dept">Department</label>
+            <select type="text" name="dept" id="dept">
+                <option value="select">select</option>
+                <option value="ECE">ECE</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                </select><br><br>
+                
+
+            
+            <label for="country">Country</label>
+            <select type="text" name="country" id="country">
+                <option value="select">select</option>
+                <option value="India">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="China">China</option>
+                </select><br><br>
+                
+
+
+            
+            <label for="Description">Description</label>
+            <textarea  id="Description" name="Description" rows="10" cols="10"></textarea><br><br>
+
+            <label for="date">Opening Date</label>
+            <input type="date" name="date" id="date" onclick="myfunction()"><br><br>   
+
+            <input type="submit" value="submit">
+            <p id="demo"></p>
+            <script>
+            function myfunction(){
+                var date = document.getElementById("demo").value;
+                var vardate = new date(date);
+                var today = new date();
+                if(vardate <= today){
+                alert("enter valid date and not greater than current date");
+                }
+   }
+</script>
+</form>
+
+    
+</body>
+</html>
